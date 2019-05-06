@@ -2,6 +2,6 @@
 # name: createCriteria
 # key: crCr
 # --
-def ${1:domainClassName} = ${1:$(capitalize yas-text)}.createCriteria().list {
+def ${1:domainClassName} = ${1:$(my/capitalize-first-char yas-text)}.createCriteria().list {
     eq('$2', $3)
 }

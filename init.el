@@ -9,6 +9,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 
+
 ;; ========== PACOTES ==========
 ;;(eval-when-compile -> package-initilialize 
 ;;(require 'use-package)) -> package-initilialize 
@@ -30,7 +31,6 @@
 
 
 ;; ========== ATALHOS ==========
-;; Adiciona atalho para abrir user-init-file
 (defun find-user-init-file ()
   "Edit the `user-init-file', in another window."
   (interactive)
@@ -40,6 +40,17 @@
 
 
 
+;; ========== FUNCTIONS ==========
+(defun my/capitalize-first-char (&optional string)
+  "Capitalize only the first character of the input STRING."
+  (when (and string (> (length string) 0))
+    (let ((first-char (substring string nil 1))
+          (rest-str   (substring string 1)))
+      (concat (capitalize first-char) rest-str))))
+
+
+
+;; ========== AUTO ==========
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,3 +69,8 @@
  ;; Font size in height: x/10pt, that means, 120height/10pt -> 12pt
  '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal
 			:weight normal :height 120 :width normal)))))
+
+
+
+;; ========== VARIABLES ==========
+(setq yas-ident-line "auto")
