@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: createCriteria
+# key: crCr
+# --
+def ${1:domainClassName} = ${1:$(capitalize yas-text)}.createCriteria().list {
+    eq('$2', $3)
+}
