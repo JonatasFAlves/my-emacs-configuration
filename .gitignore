@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Except init.el and snippets folder
+!init.el
+!snippets/*
+
+
+# Ignore gitignore :)
+!.gitignore
