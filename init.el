@@ -17,16 +17,16 @@
   :init
   (which-key-mode)
   :config
-  (which-key-setup-side-window-right-bottom)
   (setq which-key-sort-order 'which-key-key-order-alpha
-        which-key-side-window-max-width 0.33
-        which-key-idle-delay 0.05)
-  )
+        which-key-idle-delay 0.05))
 
 (use-package yasnippet :ensure t
   :init
-  (yas-global-mode 1)
-  )
+  (yas-global-mode 1))
+
+(use-package company :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
 
 
 
@@ -56,19 +56,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (yasnippets yasnippet which-key use-package))))
+ '(package-selected-packages
+   (quote
+    (company groovy-mode yasnippets yasnippet which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-
- ;; Set default font
- ;; Options -> Set Default Font;
- ;; Options -> Save Options.
- ;; Font size in height: x/10pt, that means, 120height/10pt -> 12pt
- '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal
-			:weight normal :height 120 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 120 :width normal)))))
 
 
 
