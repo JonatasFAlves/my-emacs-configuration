@@ -70,3 +70,6 @@
 
 ;; ========== VARIABLES ==========
 (setq yas-ident-line "auto")
+
+;; Remove the irritating bell sound. lol
+(setq visible-bell 1)
