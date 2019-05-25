@@ -72,5 +72,5 @@
 ;; ========== VARIABLES ==========
 (setq yas-ident-line "auto")
 
-;; Remove the irritating bell sound. lol
-(setq visible-bell 1)
+;; Remove all alarms and the annoying bell sound. lol
+ (setq ring-bell-function 'ignore)
